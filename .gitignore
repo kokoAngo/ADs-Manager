@@ -27,6 +27,9 @@ Thumbs.db
 *.swp
 *.swo
 
+# Internal Claude metadata (not for public repo)
+.claude/
+
 # Build artifacts
 dist/
 build/
