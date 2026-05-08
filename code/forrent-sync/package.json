@@ -1,0 +1,16 @@
+{
+  "name": "forrent-sync",
+  "version": "1.0.0",
+  "private": true,
+  "description": "forrent.jp -> Notion 広告管理DB 新着同期 (FNG26_入稿状況Notion管理)",
+  "scripts": {
+    "sync": "node scripts/forrent-to-notion.js",
+    "sync:dry": "node scripts/forrent-to-notion.js --dry-run"
+  },
+  "dependencies": {
+    "@notionhq/client": "^2.2.15",
+    "dotenv": "^17.2.4",
+    "playwright": "^1.49.0",
+    "sharp": "^0.34.5"
+  }
+}
