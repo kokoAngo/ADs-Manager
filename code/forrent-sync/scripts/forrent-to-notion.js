@@ -241,7 +241,7 @@ async function syncKeisaiDbAndCompare(adActiveEnriched, dryRun = false) {
       });
       await withNotionRetry(() => keisaiNotion.databases.update({
         database_id: KEISAI_DB_ID,
-        title: [{ type: "text", text: { content: `掲載物件のみ-FT（最終同期 ${syncedAt}）` } }],
+        title: [{ type: "text", text: { content: `掲載物件のみ${process.env.COMPANY_SUFFIX || "-FT"}（最終同期 ${syncedAt}）` } }],
       }), { bucket: "keisai", label: "keisai.dbtitle" });
       console.error(`  DBタイトル同期時刻 更新: ${syncedAt}`);
     } catch (e) {
